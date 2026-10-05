@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://boredrawr.web.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Boredrawr">
-<meta property="og:title" content="Boredrawr — Start searching for inspo. Start making.">
+<meta property="og:title" content="Boredrawr — Stop searching for inspo. Start making.">
 <meta property="og:description" content="One random prompt. A short timer. Something you make. Try free drawing and doodling prompts, or explore writing and any medium. No sign-up needed.">
 <meta property="og:url" content="https://boredrawr.web.app/">
 <meta property="og:image" content="https://boredrawr.web.app/img/boredrawr-social.png">
@@ -25,12 +25,12 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Boredrawr — free drawing and doodling prompts for timed creative exercises.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Boredrawr — Start searching for inspo. Start making.">
+<meta name="twitter:title" content="Boredrawr — Stop searching for inspo. Start making.">
 <meta name="twitter:description" content="Free drawing and doodling prompts for a quick creative warm-up. Choose a timer and start making. No sign-up needed.">
 <meta name="twitter:image" content="https://boredrawr.web.app/img/boredrawr-social.png">
 <meta name="twitter:image:alt" content="Boredrawr — free drawing and doodling prompts for timed creative exercises.">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="css/styles.css?v=89c30eb4c3">
+<link rel="stylesheet" href="css/styles.css?v=75f745411d">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,13 +73,16 @@
 <div class="wrap top">
 <header>
   <a class="logo" href="#top" aria-label="Boredrawr">BOREDRAW<i>R</i></a>
-  <button class="nav" id="openHow" type="button">How it works</button>
+  <nav class="header-links" aria-label="About Boredrawr">
+    <button class="nav" id="openHow" type="button">How it works</button>
+    <button class="nav" id="openFaq" type="button">FAQ</button>
+  </nav>
 </header>
 
 <main id="top">
 <div class="hero">
   <div>
-    <h1>Start searching for inspo. Start making.</h1>
+    <h1>Stop searching for inspo. Start making.</h1>
     <p class="intro">Free random prompts for drawing and doodling. Choose your time limit and start making.</p>
   </div>
 
@@ -144,22 +147,29 @@
       <li><b>Make something</b><span>Respond until the timer ends, or finish whenever you’re ready.</span></li>
     </ol>
   </div>
+</dialog>
+
+<dialog id="faqDialog" class="faq-dialog" aria-labelledby="faqTitle">
+  <div class="faq-heading">
+    <div><span class="faq-kicker">A little clarity before you create</span><h2 id="faqTitle">Frequently asked questions</h2></div>
+    <button class="close" id="closeFaq" type="button" aria-label="Close FAQ">Close</button>
+  </div>
   <div class="faq">
-    <h2>Questions about Boredrawr</h2>
-    <details><summary>What is Boredrawr?</summary><p>Boredrawr is a free web app that generates random prompts for drawing, doodling, writing and other creative activities. It runs in your browser.</p></details>
-    <details><summary>How does the prompt generator work?</summary><p>It combines an adjective, a subject and an instruction for your selected mode. Each prompt gives you a small creative task to interpret in your own way.</p></details>
-    <details><summary>Do I need drawing experience?</summary><p>No. You can use Boredrawr for a quick sketch, a simple doodle, a short paragraph or an experiment in any medium.</p></details>
-    <details><summary>Can I use it for writing?</summary><p>Yes. Write mode asks you to write one paragraph from the point of view of the character or object in your prompt.</p></details>
-    <details><summary>What does Free mode do?</summary><p>Free mode gives you a subject without restricting the medium. You decide how to respond.</p></details>
-    <details><summary>How long is each exercise?</summary><p>You can choose 15, 30 or 45 seconds, 1 minute or 3 minutes. You can also finish before the timer ends.</p></details>
-    <details><summary>Is Boredrawr free?</summary><p>Yes. You can use the prompt generator without payment or an account.</p></details>
-    <details><summary>Does Boredrawr save my work?</summary><p>Boredrawr does not record your drawings or writing. It stores a completion count in your browser on the device you use.</p></details>
+    <details><summary><span class="faq-number">01</span><span>What is Boredrawr?</span></summary><p>Boredrawr is a free web app that generates random prompts for drawing, doodling, writing and other creative activities. It runs in your browser.</p></details>
+    <details><summary><span class="faq-number">02</span><span>How does the prompt generator work?</span></summary><p>It combines an adjective, a subject and an instruction for your selected mode. Each prompt gives you a small creative task to interpret in your own way.</p></details>
+    <details><summary><span class="faq-number">03</span><span>Do I need drawing experience?</span></summary><p>No. You can use Boredrawr for a quick sketch, a simple doodle, a short paragraph or an experiment in any medium.</p></details>
+    <details><summary><span class="faq-number">04</span><span>Can I use it for writing?</span></summary><p>Yes. Write mode asks you to write one paragraph from the point of view of the character or object in your prompt.</p></details>
+    <details><summary><span class="faq-number">05</span><span>What does Free mode do?</span></summary><p>Free mode gives you a subject without restricting the medium. You decide how to respond.</p></details>
+    <details><summary><span class="faq-number">06</span><span>How long is each exercise?</span></summary><p>You can choose 15, 30 or 45 seconds, 1 minute or 3 minutes. You can also finish before the timer ends.</p></details>
+    <details><summary><span class="faq-number">07</span><span>Is Boredrawr free?</span></summary><p>Yes. You can use the prompt generator without payment or an account.</p></details>
+    <details><summary><span class="faq-number">08</span><span>Does Boredrawr save my work?</span></summary><p>Boredrawr does not record your drawings or writing. It stores a completion count in your browser on the device you use.</p></details>
   </div>
 </dialog>
 
 
+
 <div class="wrap"><footer><span>Boredrawr · random prompts for creative practice</span><span><a href="https://lauramujica.com/" target="_blank">Laura Mujica</a> · 2023-2026 ⚡</span></footer></div>
 
-<script src="js/app.js" defer></script>
+<script src="js/app.js?v=ce99692478" defer></script>
 </body>
 </html>

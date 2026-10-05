@@ -39,4 +39,6 @@ Google Search Console verification and indexing requests are managed separately 
 
 ## Brand wording
 
-Use “Start searching for inspo. Start making.” consistently in the homepage and social sharing materials. Drawing and doodling remain the primary focus.
+Use “Stop searching for inspo. Start making.” consistently in the homepage and social sharing materials. Drawing and doodling remain the primary focus.
+
+Frequently asked questions have their own orange, black and white dialog, opened from the FAQ button beside How it works. All answers are included directly in the HTML.

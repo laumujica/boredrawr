@@ -72,10 +72,13 @@ function finish(timeUp){
 $("go").onclick=function(){if(prompts)start();else loadPrompts()};$("again").onclick=start;
 $("finish").onclick=function(){finish(false)};
 $("back").onclick=function(){show("setup")};
-var dlg=$("how");
-$("openHow").onclick=function(){dlg.showModal()};
-$("closeHow").onclick=function(){dlg.close()};
-dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+// Native dialogs support Escape and restore focus to the opening button.
+[["how", "openHow", "closeHow"], ["faqDialog", "openFaq", "closeFaq"]].forEach(function(ids){
+  var dialog = $(ids[0]);
+  $(ids[1]).onclick = function(){dialog.showModal()};
+  $(ids[2]).onclick = function(){dialog.close()};
+  dialog.addEventListener("click", function(event){if(event.target === dialog)dialog.close()});
+});
 renderCount();show("setup");
 loadPrompts();
 })();
