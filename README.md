@@ -36,3 +36,7 @@ No build step is needed. Push to `main` to publish to Firebase Hosting through G
 The homepage includes an English title and description focused on drawing and doodling, canonical URL, Open Graph and Twitter card metadata, and WebSite/WebApplication structured data. `robots.txt` references the one-page `sitemap.xml`. The error page has `noindex`.
 
 Google Search Console verification and indexing requests are managed separately from Analytics. The Google Analytics measurement ID is `G-VSSH24MEQZ`.
+
+## Brand wording
+
+Use “Start searching for inspo. Start making.” consistently in the homepage and social sharing materials. Drawing and doodling remain the primary focus.
