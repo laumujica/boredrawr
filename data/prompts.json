@@ -1,0 +1,42 @@
+{
+  "adjectives": [
+    "impatient",
+    "sleepy",
+    "overconfident",
+    "lost",
+    "tiny",
+    "suspicious",
+    "polite",
+    "jealous",
+    "exhausted",
+    "nervous",
+    "dramatic",
+    "shy",
+    "grumpy",
+    "magnificent"
+  ],
+  "nouns": [
+    "cloud",
+    "toaster",
+    "lighthouse",
+    "octopus",
+    "umbrella",
+    "cactus",
+    "staircase",
+    "moon",
+    "backpack",
+    "robot",
+    "snail",
+    "traffic cone",
+    "teapot",
+    "mountain",
+    "bicycle",
+    "ghost"
+  ],
+  "modes": {
+    "Draw": "Draw a {adjective} {noun}",
+    "Write": "Write one paragraph from the point of view of a {adjective} {noun}",
+    "Doodle": "Doodle a {adjective} {noun} without lifting your pen",
+    "Free": "Make something about a {adjective} {noun}. Any medium"
+  }
+}

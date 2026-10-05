@@ -1,0 +1,32 @@
+# Boredrawr
+
+[Open Boredrawr](https://boredrawr.web.app/)
+
+## Project structure
+
+- `index.html`: page structure and content.
+- `css/styles.css`: branding, layout and responsive styles.
+- `js/app.js`: mode selection, random prompts, timer, dialog and local completion count.
+- `data/prompts.json`: adjectives, nouns and mode templates. Use `{adjective}` and `{noun}` as placeholders.
+- `img/`: hero image and favicon.
+- `fonts/`: local font files. The stylesheet expects `Author-Regular.otf`, `Author-Semibold.otf` and `Author-Bold.otf`. These files are not yet included; system fonts are used until they are added.
+- `firebase.json` and `.firebaserc`: Firebase Hosting configuration.
+- `.github/workflows/`: automatic Firebase deployments.
+
+## Local preview
+
+Use VS Code Live Server to open `index.html`, or serve this folder with:
+
+```bash
+python -m http.server 8000
+```
+
+Then open http://localhost:8000. Opening the HTML directly with `file://` does not support loading the prompt JSON reliably.
+
+## Prompt content
+
+The existing 14 adjectives, 16 nouns and 4 mode templates produce 896 combinations across all modes. Edit the JSON to add content without changing the app logic. Keep it valid JSON: double quotes and no trailing commas.
+
+## Deployment
+
+No build step is needed. Push to `main` to publish to Firebase Hosting through GitHub Actions. Pull requests get a preview deployment.
