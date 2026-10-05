@@ -8,8 +8,8 @@
 - `css/styles.css`: branding, layout and responsive styles.
 - `js/app.js`: mode selection, random prompts, timer, dialog and local completion count.
 - `data/prompts.json`: adjectives, nouns and mode templates. Use `{adjective}` and `{noun}` as placeholders.
-- `img/`: hero image and favicon.
-- `fonts/`: local font files. The stylesheet expects `Author-Regular.otf`, `Author-Semibold.otf` and `Author-Bold.otf`. These files are not yet included; system fonts are used until they are added.
+- `img/`: hero image, favicon and social sharing card.
+- `fonts/`: local font files. The stylesheet expects `Author-Regular.otf`, `Author-Semibold.otf` and `Author-Bold.otf`. All three font files are included.
 - `firebase.json` and `.firebaserc`: Firebase Hosting configuration.
 - `.github/workflows/`: automatic Firebase deployments.
 
@@ -30,3 +30,9 @@ The existing 14 adjectives, 16 nouns and 4 mode templates produce 896 combinatio
 ## Deployment
 
 No build step is needed. Push to `main` to publish to Firebase Hosting through GitHub Actions. Pull requests get a preview deployment.
+
+## Search and sharing
+
+The homepage includes an English title and description focused on drawing and doodling, canonical URL, Open Graph and Twitter card metadata, and WebSite/WebApplication structured data. `robots.txt` references the one-page `sitemap.xml`. The error page has `noindex`.
+
+Google Search Console verification and indexing requests are managed separately from Analytics. The Google Analytics measurement ID is `G-VSSH24MEQZ`.

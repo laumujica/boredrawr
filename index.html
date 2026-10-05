@@ -11,9 +11,63 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Boredrawr – random ideas for doodling</title>
+<title>Boredrawr — Free Drawing &amp; Doodle Prompt Generator</title>
+<meta name="description" content="Get a random drawing or doodle prompt. Set a timer from 15 seconds to 3 minutes and start making. Free creative warm-ups, with no sign-up.">
+<meta name="author" content="Laura Mujica">
+<link rel="canonical" href="https://boredrawr.web.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boredrawr">
+<meta property="og:title" content="Boredrawr — Stop searching for inspo. Start making.">
+<meta property="og:description" content="One random prompt. A short timer. Something you make. Try free drawing and doodling prompts, or explore writing and any medium. No sign-up needed.">
+<meta property="og:url" content="https://boredrawr.web.app/">
+<meta property="og:image" content="https://boredrawr.web.app/img/boredrawr-social.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boredrawr — free drawing and doodling prompts for timed creative exercises.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boredrawr — Stop searching for inspo. Start making.">
+<meta name="twitter:description" content="Free drawing and doodling prompts for a quick creative warm-up. Choose a timer and start making. No sign-up needed.">
+<meta name="twitter:image" content="https://boredrawr.web.app/img/boredrawr-social.png">
+<meta name="twitter:image:alt" content="Boredrawr — free drawing and doodling prompts for timed creative exercises.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://boredrawr.web.app/#website",
+      "url": "https://boredrawr.web.app/",
+      "name": "Boredrawr",
+      "inLanguage": "en",
+      "description": "Free drawing and doodling prompts for timed creative exercises."
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://boredrawr.web.app/#webapp",
+      "url": "https://boredrawr.web.app/",
+      "name": "Boredrawr",
+      "description": "A free browser-based random prompt generator for drawing, doodling, writing and timed creative exercises.",
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "A modern web browser with JavaScript enabled",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Laura Mujica",
+        "url": "https://lauramujica.com/"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap top">
@@ -26,6 +80,7 @@
 <div class="hero">
   <div>
     <h1>Stop searching. Start making.</h1>
+    <p class="intro">Free random prompts for drawing and doodling. Choose your time limit and start making.</p>
   </div>
 
   <div class="tool" id="app">
@@ -34,9 +89,9 @@
       <div id="setup" class="state">
         <div class="hero-img"><img src="img/brwr-hero.jpg" alt="Character with a traffic cone on its head, sitting next to the Boredrawr B" width="1200" height="675"></div>
         <div class="controls">
-        <div><h3>Choose how to create</h3>
+        <div><h2 class="field-label">Choose how to create</h2>
           <div class="chips" id="modes" role="group" aria-label="Mode"></div></div>
-        <div><h3>Time limit</h3>
+        <div><h2 class="field-label">Time limit</h2>
           <div class="chips" id="times" role="group" aria-label="Time limit"></div></div>
         <div class="row"><button class="btn" id="go" disabled>Give me a prompt</button></div>
         <p id="promptError" role="status" hidden>Could not load prompts. Please check your connection and try again.</p>
@@ -73,24 +128,37 @@
   <div class="m-top two">
     <h2>When the blank page isn't the real problem</h2>
     <div>
-      <p>Creative blocks don't always come from a lack of ideas. Often the hardest part is deciding what to do first, or searching for inspiration until making is postponed.</p>
-      <p>Boredrawr removes the visual noise of image-heavy inspiration platforms and leaves you with one task.</p>
+      <p>Creative blocks don’t always come from a lack of ideas. Sometimes the hardest part is choosing where to start.</p>
+      <p>Boredrawr is a free browser-based random prompt generator for drawing and doodling, with writing and free-form modes too. Choose a creative mode, set a timer and respond to one unexpected prompt.</p>
+      <p>Draw an impatient cloud. Doodle a suspicious lighthouse without lifting your pen. Write from the point of view of a sleepy toaster. Or choose Free mode and use any medium.</p>
+      <p>No account, no gallery to browse, no lengthy setup. Just a small creative exercise to get you making.</p>
       <div class="callout">Creative momentum, not a perfect result.</div>
     </div>
   </div>
   <div class="m-bottom">
     <h2>How it works</h2>
     <ol class="steps">
-      <li><b>Choose how to create</b><span>Draw, write, doodle or go free.</span></li>
-      <li><b>Set a time limit</b><span>From 15 seconds to 3 minutes.</span></li>
-      <li><b>One random prompt</b><span>A word, a phrase, an unexpected cue.</span></li>
-      <li><b>Make</b><span>Respond quickly, keep on moving.</span></li>
+      <li><b>Choose how to create</b><span>Draw, doodle, write or use any medium.</span></li>
+      <li><b>Set a time limit</b><span>Choose 15, 30 or 45 seconds, 1 minute or 3 minutes.</span></li>
+      <li><b>Get a random prompt</b><span>An unexpected combination gives you somewhere to start.</span></li>
+      <li><b>Make something</b><span>Respond until the timer ends, or finish whenever you’re ready.</span></li>
     </ol>
+  </div>
+  <div class="faq">
+    <h2>Questions about Boredrawr</h2>
+    <details><summary>What is Boredrawr?</summary><p>Boredrawr is a free web app that generates random prompts for drawing, doodling, writing and other creative activities. It runs in your browser.</p></details>
+    <details><summary>How does the prompt generator work?</summary><p>It combines an adjective, a subject and an instruction for your selected mode. Each prompt gives you a small creative task to interpret in your own way.</p></details>
+    <details><summary>Do I need drawing experience?</summary><p>No. You can use Boredrawr for a quick sketch, a simple doodle, a short paragraph or an experiment in any medium.</p></details>
+    <details><summary>Can I use it for writing?</summary><p>Yes. Write mode asks you to write one paragraph from the point of view of the character or object in your prompt.</p></details>
+    <details><summary>What does Free mode do?</summary><p>Free mode gives you a subject without restricting the medium. You decide how to respond.</p></details>
+    <details><summary>How long is each exercise?</summary><p>You can choose 15, 30 or 45 seconds, 1 minute or 3 minutes. You can also finish before the timer ends.</p></details>
+    <details><summary>Is Boredrawr free?</summary><p>Yes. You can use the prompt generator without payment or an account.</p></details>
+    <details><summary>Does Boredrawr save my work?</summary><p>Boredrawr does not record your drawings or writing. It stores a completion count in your browser on the device you use.</p></details>
   </div>
 </dialog>
 
 
-<div class="wrap"><footer><span>Boredrawr · random ideas for doodling</span><span><a href="https://lauramujica.com/" target="_blank">Laura Mujica</a> · 2023-2026 ⚡</span></footer></div>
+<div class="wrap"><footer><span>Boredrawr · random prompts for creative practice</span><span><a href="https://lauramujica.com/" target="_blank">Laura Mujica</a> · 2023-2026 ⚡</span></footer></div>
 
 <script src="js/app.js" defer></script>
 </body>
