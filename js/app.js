@@ -7,7 +7,35 @@ var mode="Draw",secs=45,total=45,endAt=0,tick=null,current="";
 
 function pick(a){return a[Math.floor(Math.random()*a.length)]}
 function fmt(s){s=Math.max(0,Math.ceil(s));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
-function show(id){["setup","run","end"].forEach(function(x){$(x).hidden=(x!==id)})}
+function show(id){["setup","run","end"].forEach(function(x){$(x).hidden=(x!==id)});schedulePromptFit()}
+// Keep the frame stable; fit the full prompt into the available card space.
+var fitFrame = null;
+function schedulePromptFit(){
+  if(fitFrame !== null)cancelAnimationFrame(fitFrame);
+  fitFrame=requestAnimationFrame(function(){fitFrame=null;fitPrompts()});
+}
+function fitPrompts(){
+  ["ptext","pdone"].forEach(function(id){
+    var text=$(id),card=text.parentElement;
+    if(!text.getClientRects().length)return;
+    text.style.fontSize="";
+    var style=getComputedStyle(card),label=card.querySelector("small");
+    var labelStyle=getComputedStyle(label);
+    var available=card.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)
+      -label.offsetHeight-parseFloat(labelStyle.marginTop)-parseFloat(labelStyle.marginBottom);
+    var base=parseFloat(getComputedStyle(text).fontSize);
+    if(text.scrollHeight<=available && text.scrollWidth<=text.clientWidth)return;
+    var low=Math.min(base,16),high=base;
+    text.style.fontSize=low+"px";
+    // Preserve a readable minimum; the panel can scroll on very small screens.
+    if(text.scrollHeight>available || text.scrollWidth>text.clientWidth)return;
+    for(var i=0;i<10;i++){
+      var size=(low+high)/2;text.style.fontSize=size+"px";
+      if(text.scrollHeight<=available && text.scrollWidth<=text.clientWidth)low=size;else high=size;
+    }
+    text.style.fontSize=low+"px";
+  });
+}
 function chips(box,items,isSel,onPick){
   box.innerHTML="";
   items.forEach(function(it){
@@ -80,6 +108,8 @@ $("back").onclick=function(){show("setup")};
   dialog.addEventListener("click", function(event){if(event.target === dialog)dialog.close()});
 });
 renderCount();show("setup");
+if(typeof ResizeObserver!=="undefined")new ResizeObserver(schedulePromptFit).observe(document.querySelector(".panel"));
+window.addEventListener("resize",schedulePromptFit);
+if(document.fonts)document.fonts.ready.then(schedulePromptFit);
 loadPrompts();
 })();
-
