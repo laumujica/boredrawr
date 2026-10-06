@@ -124,9 +124,9 @@
     }
   ],
   "modes": {
-    "Draw": "Dibujá {article} {noun} {adjective}.",
-    "Write": "Escribí un párrafo desde el punto de vista de {article} {noun} {adjective}.",
-    "Doodle": "Hacé un doodle de {article} {noun} {adjective} sin levantar el lápiz.",
-    "Free": "Creá algo sobre {article} {noun} {adjective}. Elegí el medio que quieras."
+    "Draw": "Dibuja {article} {noun} {adjective}.",
+    "Write": "Escribe un párrafo desde el punto de vista de {article} {noun} {adjective}.",
+    "Doodle": "Haz un garabato de {article} {noun} {adjective} sin levantar el lápiz.",
+    "Free": "Crea algo sobre {article} {noun} {adjective}. Elige el medio que quieras."
   }
 }

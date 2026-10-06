@@ -11,29 +11,28 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Boredrawr — Ideas gratis para dibujar y hacer doodles</title>
-<meta name="description" content="Encontrá una idea al azar para dibujar o hacer doodles. Elegí entre 15 segundos y 3 minutos y empezá a crear. Gratis y sin registrarte.">
+<title>Boredrawr — Ideas random para dibujar y hacer garabatos</title>
+<meta name="description" content="Encuentra una idea al azar para dibujar o hacer garabatos. Elige entre 15 segundos y 3 minutos y empieza a crear. Gratis y sin registrarte.">
 <meta name="author" content="Laura Mujica">
 <link rel="canonical" href="https://boredrawr.web.app/es/">
 <link rel="alternate" hreflang="en" href="https://boredrawr.web.app/">
 <link rel="alternate" hreflang="es" href="https://boredrawr.web.app/es/">
 <link rel="alternate" hreflang="x-default" href="https://boredrawr.web.app/">
-<meta property="og:locale" content="es_AR">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Boredrawr">
-<meta property="og:title" content="Boredrawr — Dejá de buscar inspiración. Empezá a crear.">
-<meta property="og:description" content="Una idea al azar. Un tiempo breve. Algo que creás vos. Probá ideas gratis para dibujar, hacer doodles, escribir o explorar cualquier medio. Sin registrarte.">
+<meta property="og:title" content="Boredrawr — Ideas random para empezar a jugar.">
+<meta property="og:description" content="Una idea al azar. Un tiempo breve. Algo que creas tú. Prueba ideas gratis para dibujar, hacer garabatos, escribir o explorar cualquier medio. Sin registrarte.">
 <meta property="og:url" content="https://boredrawr.web.app/es/">
 <meta property="og:image" content="https://boredrawr.web.app/img/boredrawr-social.png?v=fa2564079792">
 <meta property="og:image:width" content="1201">
 <meta property="og:image:height" content="631">
-<meta property="og:image:alt" content="Boredrawr — ideas gratis para dibujar y hacer doodles con un límite de tiempo.">
+<meta property="og:image:alt" content="Boredrawr — ideas gratis para dibujar y hacer garabatos con un límite de tiempo.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Boredrawr — Dejá de buscar inspiración. Empezá a crear.">
-<meta name="twitter:description" content="Ideas gratis para dibujar y hacer doodles en un ejercicio creativo breve. Elegí un tiempo y empezá a crear. Sin registrarte.">
+<meta name="twitter:title" content="Boredrawr — Ideas random para empezar a jugar.">
+<meta name="twitter:description" content="Ideas random para dibujar y hacer garabatos en un ejercicio creativo breve. Elige un tiempo y empieza a crear. Sin registrarte.">
 <meta name="twitter:image" content="https://boredrawr.web.app/img/boredrawr-social.png?v=fa2564079792">
-<meta name="twitter:image:alt" content="Boredrawr — ideas gratis para dibujar y hacer doodles con un límite de tiempo.">
+<meta name="twitter:image:alt" content="Boredrawr — ideas gratis para dibujar y hacer garabatos con un límite de tiempo.">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="stylesheet" href="/css/styles.css?v=a667f4f087">
 <script type="application/ld+json">
@@ -46,14 +45,14 @@
       "url": "https://boredrawr.web.app/es/",
       "name": "Boredrawr",
       "inLanguage": "es",
-      "description": "Ideas gratis para dibujar, hacer doodles, escribir y practicar tu creatividad con un límite de tiempo."
+      "description": "Ideas gratis para dibujar, hacer garabatos, escribir y practicar tu creatividad con un límite de tiempo."
     },
     {
       "@type": "WebApplication",
       "@id": "https://boredrawr.web.app/es/#webapp",
       "url": "https://boredrawr.web.app/es/",
       "name": "Boredrawr",
-      "description": "Ideas gratis para dibujar, hacer doodles, escribir y practicar tu creatividad con un límite de tiempo.",
+      "description": "Ideas gratis para dibujar, hacer garabatos, escribir y practicar tu creatividad con un límite de tiempo.",
       "applicationCategory": "EntertainmentApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Un navegador moderno con JavaScript habilitado",
@@ -91,8 +90,7 @@
 <main id="top">
 <div class="hero">
   <div>
-    <h1>Dejá de buscar inspiración. Empezá a crear.</h1>
-    <p class="intro">Ideas al azar para dibujar y hacer doodles. Elegí tu tiempo y empezá a crear.</p>
+    <h1>Ideas random para empezar a jugar.</h1>
   </div>
 
   <div class="tool" id="app">
@@ -101,12 +99,12 @@
       <div id="setup" class="state">
         <div class="hero-img"><img src="/img/brwr-hero.jpg" alt="Personaje con un cono de tránsito en la cabeza, sentado junto a la B de Boredrawr" width="1200" height="675"></div>
         <div class="controls">
-        <div><h2 class="field-label">Elegí cómo crear</h2>
+        <div><h2 class="field-label">Elige tu modo</h2>
           <div class="chips" id="modes" role="group" aria-label="Modo creativo"></div></div>
-        <div><h2 class="field-label">Límite de tiempo</h2>
+        <div><h2 class="field-label">Elige tu tiempo</h2>
           <div class="chips" id="times" role="group" aria-label="Límite de tiempo"></div></div>
         <div class="row"><button class="btn" id="go" disabled>Dame una idea</button></div>
-        <p id="promptError" role="status" hidden>No se pudieron cargar las ideas. Revisá tu conexión y volvé a intentar.</p>
+        <p id="promptError" role="status" hidden>No se pudieron cargar las ideas. Revisa tu conexión y vuelve a intentar.</p>
         <div class="count" id="count"><span></span><button type="button" class="reset" aria-label="Reiniciar contador" title="Reiniciar contador"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button></div>
         </div>
       </div>
@@ -141,8 +139,8 @@
     <h2>Cuando la hoja en blanco no es el verdadero problema</h2>
     <div>
       <p>Los bloqueos creativos no siempre aparecen por falta de ideas. A veces, lo más difícil es elegir por dónde empezar.</p>
-      <p>Boredrawr es una web app gratuita que genera ideas al azar para dibujar y hacer doodles. También podés escribir o elegir un medio libre. Elegí un modo creativo, un tiempo y una idea inesperada para interpretar.</p>
-      <p>Dibujá una nube impaciente. Hacé un doodle de un faro sospechoso sin levantar el lápiz. Escribí desde el punto de vista de una tostadora dormilona. O elegí el modo Libre y usá cualquier medio.</p>
+      <p>Boredrawr es una web app gratuita que genera ideas al azar para dibujar y hacer garabatos. También puedes escribir o elegir un medio libre. Elige un modo creativo, un tiempo y una idea inesperada para interpretar.</p>
+      <p>Dibuja una nube impaciente. Haz un garabato de un faro sospechoso sin levantar el lápiz. Escribe desde el punto de vista de una tostadora dormilona. O elige el modo Libre y usa cualquier medio.</p>
       <p>Sin cuentas, sin galerías para recorrer ni preparativos largos. Solo un pequeño ejercicio creativo para empezar a hacer.</p>
       <div class="callout">Dale impulso a tu creatividad. El resultado no tiene que ser perfecto.</div>
     </div>
@@ -150,10 +148,10 @@
   <div class="m-bottom">
     <h2>Cómo funciona</h2>
     <ol class="steps">
-      <li><b>Elegí cómo crear</b><span>Dibujá, hacé doodles, escribí o usá cualquier medio.</span></li>
-      <li><b>Elegí un límite de tiempo</b><span>Elegí 15, 30 o 45 segundos, 1 minuto o 3 minutos.</span></li>
-      <li><b>Recibí una idea al azar</b><span>Una combinación inesperada te da un punto de partida.</span></li>
-      <li><b>Creá algo</b><span>Interpretá la idea hasta que termine el tiempo, o terminá cuando quieras.</span></li>
+      <li><b>Elige tu modo</b><span>Dibuja, haz garabatos, escribe o usa cualquier medio.</span></li>
+      <li><b>Elige tu tiempo</b><span>Elige 15, 30 o 45 segundos, 1 minuto o 3 minutos.</span></li>
+      <li><b>Recibe una idea al azar</b><span>Una combinación inesperada te da un punto de partida.</span></li>
+      <li><b>Crea algo</b><span>Usa papel y lápiz o tu herramienta preferida. Puedes terminar cuando quieras.</span></li>
     </ol>
   </div>
 </dialog>
@@ -164,14 +162,15 @@
     <button class="close" id="closeFaq" type="button" aria-label="Cerrar preguntas frecuentes">Cerrar</button>
   </div>
   <div class="faq">
-    <details><summary><span class="faq-number">01</span><span>¿Qué es Boredrawr?</span></summary><p>Boredrawr es una web app gratuita que genera ideas al azar para dibujar, hacer doodles, escribir y explorar otras actividades creativas. Funciona en tu navegador.</p></details>
+    <details><summary><span class="faq-number">01</span><span>¿Qué es Boredrawr?</span></summary><p>Boredrawr es una web app gratuita que genera ideas al azar para dibujar, hacer garabatos, escribir y explorar otras actividades creativas. Funciona en tu navegador.</p></details>
     <details><summary><span class="faq-number">02</span><span>¿Cómo funciona el generador de ideas?</span></summary><p>Combina un adjetivo, un personaje u objeto y una instrucción según el modo que elijas. Cada idea propone una pequeña actividad creativa para interpretar a tu manera.</p></details>
-    <details><summary><span class="faq-number">03</span><span>¿Necesito saber dibujar?</span></summary><p>No. Podés usar Boredrawr para un boceto rápido, un doodle sencillo, un párrafo corto o un experimento en cualquier medio.</p></details>
+    <details><summary><span class="faq-number">03</span><span>¿Necesito saber dibujar?</span></summary><p>No. Puedes usar Boredrawr para un boceto rápido, un garabato sencillo, un párrafo corto o un experimento en cualquier medio.</p></details>
     <details><summary><span class="faq-number">04</span><span>¿Puedo usarlo para escribir?</span></summary><p>Sí. El modo Escribir te propone un párrafo desde el punto de vista del personaje u objeto de tu idea.</p></details>
-    <details><summary><span class="faq-number">05</span><span>¿Qué hace el modo Libre?</span></summary><p>El modo Libre te da un tema sin limitar el medio. Vos decidís cómo interpretarlo.</p></details>
-    <details><summary><span class="faq-number">06</span><span>¿Cuánto dura cada ejercicio?</span></summary><p>Podés elegir 15, 30 o 45 segundos, 1 minuto o 3 minutos. También podés terminar antes de que se acabe el tiempo.</p></details>
-    <details><summary><span class="faq-number">07</span><span>¿Boredrawr es gratis?</span></summary><p>Sí. Podés usar el generador de ideas sin pagar ni crear una cuenta.</p></details>
-    <details><summary><span class="faq-number">08</span><span>¿Boredrawr guarda lo que hago?</span></summary><p>Boredrawr no guarda tus dibujos ni tus textos. Solo guarda un contador de ejercicios completados en el navegador del dispositivo que usás.</p></details>
+    <details><summary><span class="faq-number">05</span><span>¿Qué hace el modo Libre?</span></summary><p>El modo Libre te da un tema sin limitar el medio. Tú decides cómo interpretarlo.</p></details>
+    <details><summary><span class="faq-number">06</span><span>¿Cuánto dura cada ejercicio?</span></summary><p>Puedes elegir 15, 30 o 45 segundos, 1 minuto o 3 minutos. También puedes terminar antes de que se acabe el tiempo.</p></details>
+    <details><summary><span class="faq-number">07</span><span>¿Boredrawr es gratis?</span></summary><p>Sí. Puedes usar el generador de ideas sin pagar ni crear una cuenta.</p></details>
+    <details><summary><span class="faq-number">08</span><span>¿Boredrawr guarda lo que hago?</span></summary><p>Boredrawr no guarda tus dibujos ni tus textos. Solo guarda un contador de ejercicios completados en el navegador del dispositivo que usas.</p></details>
+    <details><summary><span class="faq-number">09</span><span>¿De dónde viene el nombre Boredrawr?</span></summary><p>Se pronuncia aproximadamente «bor-dróuer», con un sonido cercano al inglés. Boredrawr combina tres palabras en inglés: <b>bored</b> (aburrido), <b>draw</b> (dibujar) y <b>drawer</b> (cajón). El aburrimiento se convierte en una invitación a dibujar, y el cajón suma un juego: imagina abrirlo y sacar una idea inesperada. Nunca sabes del todo qué encontrarás ni adónde te llevará.</p></details>
   </div>
 </dialog>
 
@@ -179,6 +178,6 @@
 
 <div class="wrap"><footer><span>Boredrawr · ideas al azar para practicar tu creatividad</span><span><a href="https://lauramujica.com/" target="_blank">Laura Mujica</a> · 2023-2026 ⚡</span></footer></div>
 
-<script src="/js/app.js?v=01582b9e4e" defer></script>
+<script src="/js/app.js?v=752061d4e9" defer></script>
 </body>
 </html>
