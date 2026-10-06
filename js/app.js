@@ -116,6 +116,19 @@ $("back").onclick=function(){show("setup")};
   $(ids[2]).onclick = function(){dialog.close()};
   dialog.addEventListener("click", function(event){if(event.target === dialog)dialog.close()});
 });
+// Copy only the email address; keep the mailto link available independently.
+var copyEmail=$("copyEmail");
+if(copyEmail)copyEmail.onclick=async function(){
+  copyEmail.disabled=true;
+  var status=$("copyEmailStatus");
+  status.textContent="";
+  try{
+    await navigator.clipboard.writeText($("contactEmail").textContent.trim());
+    status.textContent=spanish?"Correo copiado.":"Email copied.";
+  }catch(error){
+    status.textContent=spanish?"No se pudo copiar. Selecciona el correo y cópialo manualmente.":"Could not copy. Select the email address and copy it manually.";
+  }finally{copyEmail.disabled=false;}
+};
 renderCount();show("setup");
 if(typeof ResizeObserver!=="undefined")new ResizeObserver(schedulePromptFit).observe(document.querySelector(".panel"));
 window.addEventListener("resize",schedulePromptFit);
