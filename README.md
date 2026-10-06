@@ -48,13 +48,12 @@ The app generates prompts by combining words and templates from a local JSON fil
 - Responsive layout, an explanation of the experience and a separate FAQ.
 - Automatic Firebase Hosting deployments through GitHub Actions.
 
-The current version is live and in English. It does not store drawings or writing.
+The current version is available in English and Spanish. [Open the Spanish version](https://boredrawr.web.app/es/). It does not store drawings or writing.
 
 ## Next steps
 
 - Refine visual legibility.
 - Expand and curate the prompt vocabulary.
-- Add a Spanish experience, including grammatically coherent prompts.
 - Gather user feedback to guide further improvements.
 
 ---

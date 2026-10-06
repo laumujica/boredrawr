@@ -2,6 +2,9 @@
 var $=function(id){return document.getElementById(id)};
 var prompts = null;
 var modes = {};
+var spanish=document.documentElement.lang==="es";
+var labels=spanish?{Draw:"Dibujar",Write:"Escribir",Doodle:"Doodle",Free:"Libre"}:null;
+var copy=spanish?{go:"Dame una idea",retry:"Volver a cargar las ideas",count:"Ejercicios completados en este dispositivo: ",timeUp:"Se terminó el tiempo.",done:"¡Listo!"}:{go:"Give me a prompt",retry:"Retry loading prompts",count:"Prompts completed on this device: ",timeUp:"Time's up.",done:"Nice. Done."};
 var times=[[15,"0:15"],[30,"0:30"],[45,"0:45"],[60,"1:00"],[180,"3:00"]];
 var mode="Draw",secs=45,total=45,endAt=0,tick=null,current="";
 
@@ -50,24 +53,24 @@ async function loadPrompts() {
   var button = $("go");
   button.disabled = true;
   try {
-    var response = await fetch("data/prompts.json");
+    var response = await fetch(spanish?"/data/prompts.es.json":"/data/prompts.json");
     if (!response.ok) throw new Error("Could not load prompts");
     var data = await response.json();
     if (!Array.isArray(data.adjectives) || !data.adjectives.length ||
         !Array.isArray(data.nouns) || !data.nouns.length ||
         !data.modes || typeof data.modes.Draw !== "string" ||
-        !data.adjectives.every(function(x){return typeof x === "string"}) ||
-        !data.nouns.every(function(x){return typeof x === "string"}) ||
+        !data.adjectives.every(function(x){return spanish?x && typeof x.m==="string" && typeof x.f==="string":typeof x === "string"}) ||
+        !data.nouns.every(function(x){return spanish?x && typeof x.word==="string" && (x.gender==="m" || x.gender==="f"):typeof x === "string"}) ||
         !Object.values(data.modes).every(function(x){return typeof x === "string"})) {
       throw new Error("Invalid prompt data");
     }
     prompts = data;
     modes = data.modes;
-    chips($("modes"),Object.keys(modes).map(function(k){return{label:k,value:k}}),function(v){return v===mode},function(v){mode=v});
-    button.textContent = "Give me a prompt";
+    chips($("modes"),Object.keys(modes).map(function(k){return{label:labels?labels[k]:k,value:k}}),function(v){return v===mode},function(v){mode=v});
+    button.textContent = copy.go;
     $("promptError").hidden = true;
   } catch (error) {
-    button.textContent = "Retry loading prompts";
+    button.textContent = copy.retry;
     $("promptError").hidden = false;
   } finally {
     button.disabled = false;
@@ -77,11 +80,17 @@ chips($("times"),times.map(function(t){return{label:t[1],value:t[0]}}),function(
 
 function getCount(){try{return parseInt(localStorage.getItem("brwr_done")||"0",10)||0}catch(e){return 0}}
 function addCount(){try{localStorage.setItem("brwr_done",String(getCount()+1))}catch(e){}}
-function renderCount(){var n=getCount();["count","count2"].forEach(function(id){var el=$(id);el.hidden=!n;el.querySelector("span").textContent="Prompts completed on this device: "+n})}
+function renderCount(){var n=getCount();["count","count2"].forEach(function(id){var el=$(id);el.hidden=!n;el.querySelector("span").textContent=copy.count+n})}
 function resetCount(){try{localStorage.setItem("brwr_done","0")}catch(e){}renderCount()}
 [].forEach.call(document.querySelectorAll(".reset"),function(b){b.onclick=resetCount});
 
-function newPrompt(){current=modes[mode].replace(/\{adjective\}/g,pick(prompts.adjectives)).replace(/\{noun\}/g,pick(prompts.nouns));$("ptext").textContent=current}
+function newPrompt(){
+  var adjective=pick(prompts.adjectives),noun=pick(prompts.nouns);
+  var article=spanish?(noun.gender==="f"?"una":"un"):"";
+  current=modes[mode].replace(/\{adjective\}/g,spanish?adjective[noun.gender]:adjective)
+    .replace(/\{noun\}/g,spanish?noun.word:noun).replace(/\{article\}/g,article);
+  $("ptext").textContent=current;
+}
 function start(){
   total=secs;endAt=Date.now()+secs*1000;newPrompt();show("run");
   clearInterval(tick);tick=setInterval(update,200);update();
@@ -94,7 +103,7 @@ function update(){
 }
 function finish(timeUp){
   clearInterval(tick);
-  $("endmsg").textContent=timeUp?"Time's up.":"Nice. Done.";
+  $("endmsg").textContent=timeUp?copy.timeUp:copy.done;
   $("pdone").textContent=current;addCount();renderCount();show("end");
 }
 $("go").onclick=function(){if(prompts)start();else loadPrompts()};$("again").onclick=start;

@@ -1,0 +1,132 @@
+{
+  "adjectives": [
+    {
+      "m": "impaciente",
+      "f": "impaciente"
+    },
+    {
+      "m": "dormilón",
+      "f": "dormilona"
+    },
+    {
+      "m": "demasiado confiado",
+      "f": "demasiado confiada"
+    },
+    {
+      "m": "perdido",
+      "f": "perdida"
+    },
+    {
+      "m": "diminuto",
+      "f": "diminuta"
+    },
+    {
+      "m": "sospechoso",
+      "f": "sospechosa"
+    },
+    {
+      "m": "educado",
+      "f": "educada"
+    },
+    {
+      "m": "celoso",
+      "f": "celosa"
+    },
+    {
+      "m": "agotado",
+      "f": "agotada"
+    },
+    {
+      "m": "nervioso",
+      "f": "nerviosa"
+    },
+    {
+      "m": "dramático",
+      "f": "dramática"
+    },
+    {
+      "m": "tímido",
+      "f": "tímida"
+    },
+    {
+      "m": "gruñón",
+      "f": "gruñona"
+    },
+    {
+      "m": "magnífico",
+      "f": "magnífica"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "nube",
+      "gender": "f"
+    },
+    {
+      "word": "tostadora",
+      "gender": "f"
+    },
+    {
+      "word": "faro",
+      "gender": "m"
+    },
+    {
+      "word": "pulpo",
+      "gender": "m"
+    },
+    {
+      "word": "paraguas",
+      "gender": "m"
+    },
+    {
+      "word": "cactus",
+      "gender": "m"
+    },
+    {
+      "word": "escalera",
+      "gender": "f"
+    },
+    {
+      "word": "luna",
+      "gender": "f"
+    },
+    {
+      "word": "mochila",
+      "gender": "f"
+    },
+    {
+      "word": "robot",
+      "gender": "m"
+    },
+    {
+      "word": "caracol",
+      "gender": "m"
+    },
+    {
+      "word": "cono de tránsito",
+      "gender": "m"
+    },
+    {
+      "word": "tetera",
+      "gender": "f"
+    },
+    {
+      "word": "montaña",
+      "gender": "f"
+    },
+    {
+      "word": "bicicleta",
+      "gender": "f"
+    },
+    {
+      "word": "fantasma",
+      "gender": "m"
+    }
+  ],
+  "modes": {
+    "Draw": "Dibujá {article} {noun} {adjective}.",
+    "Write": "Escribí un párrafo desde el punto de vista de {article} {noun} {adjective}.",
+    "Doodle": "Hacé un doodle de {article} {noun} {adjective} sin levantar el lápiz.",
+    "Free": "Creá algo sobre {article} {noun} {adjective}. Elegí el medio que quieras."
+  }
+}
