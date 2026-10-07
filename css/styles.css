@@ -95,3 +95,18 @@ footer{padding:10px 0 clamp(14px,3vh,28px);color:var(--muted);font-size:.85rem;d
 @media(max-width:520px){.header-links{gap:16px}.faq-heading{padding:22px 20px;gap:14px}.faq-dialog .faq{padding:8px 20px 20px}.faq-heading h2{font-size:1.4rem}.faq-dialog .faq summary{font-size:.95rem;gap:10px}.faq-dialog .faq p{margin-left:42px}}
 
 .faq-contact{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}.faq-contact a{color:inherit;overflow-wrap:anywhere}.copy-email{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;flex-shrink:0;border:2px solid #111;background:#fff;color:#111;cursor:pointer}.copy-email:hover{background:var(--orange)}.copy-email:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.copy-status{display:block;font-size:.9rem}.copy-status:empty{display:none}
+
+/* Compact navigation and centered footer on mobile. */
+.heading-accent{color:var(--orange)}
+.menu-toggle{display:none}
+@media(max-width:620px){
+ header{position:relative;align-items:center}
+ .menu-ready .menu-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:10px;background:var(--orange);border:3px solid var(--line);box-shadow:4px 4px 0 var(--line);cursor:pointer;color:var(--ink)}
+ .menu-toggle span{display:block;width:20px;height:2px;background:#000}
+ .menu-toggle:focus-visible{outline:3px solid var(--orange);outline-offset:6px}
+ .menu-ready .header-links{display:none;position:absolute;top:calc(100% - 4px);right:0;z-index:10;flex-direction:column;align-items:flex-start;gap:20px;min-width:210px;padding:20px;background:var(--card);border:3px solid var(--line);box-shadow:5px 5px 0 var(--line)}
+ .menu-ready .header-links.is-open{display:flex}
+ .menu-ready .language-switch{flex-basis:auto;justify-content:flex-start;border:0;padding:0}
+ footer{flex-direction:column;align-items:center;justify-content:center;text-align:center}
+ footer>span{width:100%}
+}

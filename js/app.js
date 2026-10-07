@@ -109,6 +109,22 @@ function finish(timeUp){
 $("go").onclick=function(){if(prompts)start();else loadPrompts()};$("again").onclick=start;
 $("finish").onclick=function(){finish(false)};
 $("back").onclick=function(){show("setup")};
+// Keep the existing navigation in a compact mobile disclosure.
+var menuToggle=$("menuToggle"),headerLinks=$("headerLinks");
+if(menuToggle && headerLinks){
+  var header=menuToggle.parentElement;
+  header.classList.add("menu-ready");
+  function setMenu(open){
+    menuToggle.setAttribute("aria-expanded",String(open));
+    menuToggle.setAttribute("aria-label",spanish?(open?"Cerrar menú":"Abrir menú"):(open?"Close menu":"Open menu"));
+    headerLinks.classList.toggle("is-open",open);
+  }
+  menuToggle.addEventListener("click",function(){setMenu(menuToggle.getAttribute("aria-expanded")!=="true")});
+  document.addEventListener("click",function(event){if(!header.contains(event.target))setMenu(false)});
+  document.addEventListener("keydown",function(event){if(event.key==="Escape" && menuToggle.getAttribute("aria-expanded")==="true"){setMenu(false);menuToggle.focus()}});
+  headerLinks.addEventListener("click",function(event){if(event.target.closest("button,a"))setMenu(false)});
+  window.matchMedia("(max-width:620px)").addEventListener("change",function(){setMenu(false)});
+}
 // Native dialogs support Escape and restore focus to the opening button.
 [["how", "openHow", "closeHow"], ["faqDialog", "openFaq", "closeFaq"]].forEach(function(ids){
   var dialog = $(ids[0]);
