@@ -106,9 +106,21 @@ footer{padding:10px 0 clamp(14px,3vh,28px);color:var(--muted);font-size:.85rem;d
  .menu-toggle:focus-visible{outline:3px solid var(--orange);outline-offset:6px}
  .menu-ready .header-links{display:none;position:absolute;top:calc(100% - 4px);right:0;z-index:10;flex-direction:column;align-items:flex-start;gap:20px;min-width:210px;padding:20px;background:var(--card);border:3px solid var(--line);box-shadow:5px 5px 0 var(--line)}
  .menu-ready .header-links.is-open{display:flex}
- .menu-ready .language-switch{flex-basis:auto;justify-content:flex-start;border:0;padding:0}
+ .menu-ready .language-switch{flex-basis:auto;justify-content:flex-start;width:100%;border:0;border-top:1px solid var(--muted);padding:14px 0 0}
  footer{flex-direction:column;align-items:center;justify-content:center;text-align:center}
  footer>span{width:100%}
 }
 
-@media(max-width:620px){.logo{display:inline-flex;align-items:baseline;line-height:1;white-space:nowrap}.logo i{display:block;font:inherit;line-height:1;transform-origin:center}}
+@media(max-width:620px){.logo{display:inline-flex;align-items:baseline;font-size:1.75rem;line-height:1;white-space:nowrap}.logo i{display:block;font:inherit;line-height:1;transform-origin:center}}
+
+/* Keep the activity frame and heading together in the mobile viewport. */
+@media(max-width:620px){
+ .hero{justify-content:center;padding:12px 0;gap:18px}
+ .hero>div:first-child{flex-shrink:0}
+ .hero h1{text-align:center}
+ .tool{flex:0 1 386px}
+ .hero-img{width:min(40%,220px,42vh)}
+ #setup .count{max-width:calc(60% - 8px)}
+ .count>span{min-width:0;overflow-wrap:anywhere}
+ .count .reset{flex-shrink:0}
+}

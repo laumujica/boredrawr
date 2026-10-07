@@ -6,7 +6,7 @@ var spanish=document.documentElement.lang==="es";
 var labels=spanish?{Draw:"Dibujar",Write:"Escribir",Doodle:"Garabatos",Free:"Libre"}:null;
 var copy=spanish?{go:"Dame una idea",retry:"Volver a cargar las ideas",count:"Ejercicios completados en este dispositivo: ",timeUp:"Se terminó el tiempo.",done:"¡Listo!"}:{go:"Give me a prompt",retry:"Retry loading prompts",count:"Prompts completed on this device: ",timeUp:"Time's up.",done:"Nice. Done."};
 var times=[[15,"0:15"],[30,"0:30"],[45,"0:45"],[60,"1:00"],[180,"3:00"]];
-var mode="Doodle",secs=45,total=45,endAt=0,tick=null,current="";
+var mode="Doodle",secs=15,total=15,endAt=0,tick=null,current="";
 
 function pick(a){return a[Math.floor(Math.random()*a.length)]}
 function fmt(s){s=Math.max(0,Math.ceil(s));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
