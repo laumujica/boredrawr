@@ -101,8 +101,8 @@ footer{padding:10px 0 clamp(14px,3vh,28px);color:var(--muted);font-size:.85rem;d
 .menu-toggle{display:none}
 @media(max-width:620px){
  header{position:relative;align-items:center}
- .menu-ready .menu-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:10px;background:var(--orange);border:3px solid var(--line);box-shadow:4px 4px 0 var(--line);cursor:pointer;color:var(--ink)}
- .menu-toggle span{display:block;width:20px;height:2px;background:#000}
+ .menu-ready .menu-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;width:32px;height:32px;padding:6px;background:transparent;border:2px solid var(--line);box-shadow:3px 3px 0 var(--line);cursor:pointer;color:var(--ink)}
+ .menu-toggle span{display:block;width:16px;height:2px;background:var(--ink)}
  .menu-toggle:focus-visible{outline:3px solid var(--orange);outline-offset:6px}
  .menu-ready .header-links{display:none;position:absolute;top:calc(100% - 4px);right:0;z-index:10;flex-direction:column;align-items:flex-start;gap:20px;min-width:210px;padding:20px;background:var(--card);border:3px solid var(--line);box-shadow:5px 5px 0 var(--line)}
  .menu-ready .header-links.is-open{display:flex}
@@ -110,3 +110,5 @@ footer{padding:10px 0 clamp(14px,3vh,28px);color:var(--muted);font-size:.85rem;d
  footer{flex-direction:column;align-items:center;justify-content:center;text-align:center}
  footer>span{width:100%}
 }
+
+@media(max-width:620px){.logo{display:inline-flex;align-items:baseline;line-height:1;white-space:nowrap}.logo i{display:block;font:inherit;line-height:1;transform-origin:center}}
